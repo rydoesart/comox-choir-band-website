@@ -1,0 +1,809 @@
+/* --- General Body & Fonts --- */
+body {
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.6;
+  color: #111111;
+  background: #F8F9F5;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* --- Headings --- */
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+  margin: 0.5rem 0 1rem 0;
+  color: #2a5d34; /* natural earthy green */
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.6rem;
+}
+
+/* Captions*/
+caption {
+  color: #6A6A6A;
+  font-size: 1.6rem;
+
+}
+
+/* Links */
+a {
+  color: #A8C048;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+a:hover {
+  color: #6A8E0A;
+}
+
+
+/* --- Sections --- */
+section {
+  padding: 2rem;
+  width: 100%;
+}
+
+/*---- HEADER ----*/
+header {
+  background-color:  #A8C048;
+  color: #ffffff;
+  padding: 15px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 150px;
+}
+
+header .toggle {
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px 0;
+  flex-direction: column;
+  display: none;
+}
+
+header ul.show-items {
+  display: flex;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  display: inline-block;
+}
+
+header .nav-tickets {
+  background-color: #0C3B24; 
+  color: #96AD40;             
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+
+header .nav-tickets:hover {
+  background-color: #002915;  
+  box-shadow: 2px 4px 12px #000000; 
+}
+
+/*---- Images ---- */
+img {
+    max-width: 100%;   /* scales down on small screens */
+    height: auto;      /* keeps aspect ratio */
+}
+
+/* ICONSS */
+.social-icon {
+  font-size: 5rem;
+}   
+
+/* --- HERO SECTION --- */
+.hero {
+  background-color: #0C3B24; 
+  background-image: url(images/violin.jpg);
+  color: #ffffff;           
+  padding: 5rem;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero headline */
+.hero h1, .hero h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;  /* remove green heading for better contrast */
+  font-weight: 300;
+  text-shadow: 3px 3px 6px #000;
+}
+
+/* Hero subtext */
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #E8F5E1; 
+  text-shadow: 3px 3px 6px #000;
+}
+
+/* Hero button */
+.hero .btn {
+  background-color: #A8C048; 
+  color: #0C3B24;             
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+
+.hero .btn:hover {
+  background-color: #96AD40;  
+  box-shadow: 2px 4px 12px #000000; 
+}
+
+/* --- About Festival Section --- */
+.about-festival {
+  background-color: #c3edac;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Text styling */
+.festival-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+.festival-content h2 {
+  font-size: 2.5rem;
+  color: #2a5d34;
+}
+
+.festival-content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #111111;
+}
+
+/* Image styling */
+.about-festival img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px #000000; 
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 1.5rem;
+}
+
+.about-festival img:hover {
+  transform: scale(1.05);
+}
+
+.about-festival img:active {
+  transform: scale(1.1);
+}
+
+/* --- Festival Schedule --- */
+.festival-schedule {
+  background-color: #F8F9F5;
+  padding: 3rem 1.5rem; /* smaller padding for mobile */
+  margin-bottom: 3rem;  /* space below */
+  width: 100%;
+  
+}
+
+.festival-schedule h2 {
+  color: #2a5d34;
+  text-align: center;
+  margin: 1.5rem;
+}   
+
+/* safe net for overflowing content */
+.wrapper-schedule {
+  border-radius: 15px;
+  overflow: hidden; 
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* to give actual table border radius */
+.wrapper-schedule table {
+  width: 95%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 15px; 
+  overflow: hidden;   
+  margin: 0 auto;
+  margin-bottom: 2rem; 
+  box-shadow: 2px 4px 4px 0 #000000; 
+}
+
+/* rounding top corners */
+.wrapper-schedule thead th:first-child {
+  border-top-left-radius: 15px;
+}
+
+.wrapper-schedule thead th:last-child {
+  border-top-right-radius: 15px;
+}
+
+/* rounding bottom corners */
+.wrapper-schedule tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+.wrapper-schedule tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+.wrapper-schedule caption {
+  caption-side: top;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  color: #0C3B24;
+}
+
+.wrapper-schedule th, 
+.wrapper-schedule td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  /* prevents overflow text */
+  overflow-wrap: anywhere;
+}
+
+.wrapper-schedule th {
+  background-color: #A8C048;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+.wrapper-schedule tbody tr:hover {
+  background-color: #E8F5E1;
+}
+
+.wrapper-schedule a {
+  display: inline-block;
+  margin: 1rem auto;
+  background-color: #A8C048;
+  color: #0C3B24;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.wrapper-schedule a:hover {
+  background-color: #96AD40;
+  box-shadow: 2px 4px 12px #000000; 
+}
+
+/* -- adjudicators --*/
+.adjudicators {
+  text-align: center;
+  background-color: #c3edac;
+}
+
+.adjudicators a {
+  display: block;
+  background-color: #ffffff;
+  color: #0C3B24;
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 2px 4px 12px #000000;
+  transition: 0.2s ease, 0.2s ease;
+  text-align: center;
+}
+
+.adjudicators a:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 8px 16px #000000;
+}
+
+.list-adjudicators {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;            
+  flex-wrap: wrap;      
+  margin: 0 auto;
+  max-width: 1000px;    /* keeping it neat */
+}
+
+.item-adjudicator {
+  text-align: center;
+  width: 300px;
+}
+
+.item-adjudicator img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-adjudicator figure {
+  margin: 0;
+}
+
+/****** ABOUT PAGE ******/
+
+.festival-section-1 {
+  background-color: #A8C048;
+  margin: 0 auto;
+}
+
+/*- the one with schedule in it -*/
+.festival-section-2 {
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Festival Sponsors */
+
+.festival-sponsors {
+    max-width: 95%;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px #000;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.festival-sponsors h2 {
+    font-family: 'Lora', serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4a4a4a;
+    font-size: 2.5rem;
+}
+
+.festival-sponsors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.festival-sponsors li {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 2;
+    margin-bottom: 0.5rem;
+    background-color: #ffffff;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    border-left: 4px solid #A8C048;
+    transition: 0.2s ease;
+    text-align: left;
+}
+
+.festival-sponsors li:hover {
+    transform: translateX(3px);
+} 
+
+/*--- spring advert ---*/
+
+.spring-advert {
+    width: 85%;
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px #000000;
+    background: #ffffff url('images/bjjr-image.png') center center / cover no-repeat;
+    text-shadow: 1px 2px 3px #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.spring-advert h2 {
+  font-family: 'Lora', serif;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.spring-advert h3 {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.spring-advert figure {
+  margin: 0;
+  text-align: center;
+}
+
+.spring-advert figure img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #000;
+  margin-bottom: 0.5rem;
+  transition: 0.3s ease, 0.3s ease;
+}
+
+.spring-advert figure img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px #000;
+}
+
+.spring-advert figure figcaption {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.spring-advert dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: left;   
+  margin: 0 auto;
+}
+
+.spring-advert dt {
+  font-weight: bold;
+  color: #fff;
+}
+
+.spring-advert dd {
+  margin: 0 0 0.5rem 0;
+  padding-left: 0.5rem;
+}
+
+/*--- ticket section---*/
+
+.ticket-section h2,.ticket-section p  {
+  text-align: center;
+}
+
+
+.ticketform {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 2px 4px 12px #000000;
+}
+
+.ticketform h2 {
+  margin-bottom: 20px;
+}
+
+.ticketform label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.ticketform input,
+.ticketform select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 1em;
+}
+
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+  border: 1px solid red;
+}
+
+.label-required {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.ticketform .btn {
+  background-color: #A8C048; 
+  color: #0C3B24;             
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+  border: none;        
+  outline: none;
+}
+
+.ticketform .btn:hover {
+  background-color: #96AD40;  
+  box-shadow: 2px 4px 12px #000000; 
+}
+
+
+/*** --- footer --- ***/
+footer {
+  background: #000000;
+  color: #fff;
+  padding: 24px 16px 0;
+  text-align: center;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+footer h2 {
+  color: #A8C048;
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 6px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+footer .copyright {
+  margin-top: 18px;
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+
+footer a {
+  color: #A8C048;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+footer a:hover {
+  color: #6A8E0A;
+}
+
+.footer-google-embed {
+    display: none;
+  }
+
+.floating-btn {
+  display: none;
+}
+
+.content-legal {
+    width: 100%;
+    border-top: 1px solid #6A8E0A;
+    text-align: center;
+  }
+
+/* Large devices (Desktop, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+
+  header .toggle {
+    display: none;
+  }
+
+  header .logo-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 0 3rem;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  header nav li {
+    list-style: none;
+    margin: 0 20px;
+  }
+
+  header nav a {
+    padding: 0;
+  
+  }
+  /*sections*/
+  .hero {
+    height: 100vh;
+    padding: 6rem 4rem;
+  }
+
+  .about-festival {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 4rem;
+  }
+
+  .about-festival .festival-content {
+    max-width: 45%;
+    text-align: left;
+  }
+
+  .about-festival img {
+    max-width: 45%;
+  }
+
+  .wrapper-schedule table {
+    width: 80%;
+  }
+
+  .adjudicators .list-adjudicators {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .festival-sponsors {
+    width: 80%;
+  }
+  .spring-advert {
+    width: 78%;
+  }
+
+  /*--footer--*/
+  footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .social-contact nav {
+    padding-top: 20px;
+  }
+  footer ul {
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-start;
+  }
+
+  footer .copyright {
+    margin-top: 0;
+  }
+
+  .contain-footer {
+    display: flex;
+    align-items: center;
+    padding: 4rem 5rem;
+    justify-content: center;
+  }
+
+  .acknowledgement {
+    flex: 1;
+  }
+
+  .contacts {
+    flex: 2;
+  }
+
+  .contacts ul {
+    display: flex;
+    justify-content: center ;
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contacts p {
+    margin-bottom: 1rem;
+  }
+
+  .acknowledgement img {
+    margin-bottom: 1rem;
+  }
+
+  .footer-google-embed {
+    display: block;
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.footer-google-embed iframe {
+    width: 100%;
+    height: 150px;
+    border: 0;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;       /* distance from the bottom */
+  right: 20px;        /* distance from the right */
+  background-color: #A8C048;
+  color: #0C3B24;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 2px 4px 12px #000000;
+  transition: 0.2s ease-in-out;
+  z-index: 1000; /* make sure it sits above other content */
+}
+
+.floating-btn:hover {
+  background-color: #96AD40;
+  box-shadow: 2px 6px 16px #000000;
+}
+
+}
+
